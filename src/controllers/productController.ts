@@ -19,6 +19,8 @@ export const createProduct = async (
     const createdProduct = await Product.create(newProduct);
     res.status(201).json(createdProduct);
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({ error: "Internal Server Error" });
   }
 };

@@ -4,11 +4,11 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
-} from "controllers/productController";
+} from "../controllers/productController";
 
 const router = express.Router();
-router.get("/frozen", getAllProducts);
-router.post("/frozen", createProduct);
+router.get("/products", getAllProducts);
+router.post("/products", createProduct);
 router.put("/products/:id", updateProduct);
 router.delete("/products/:id", deleteProduct);
 
